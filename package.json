@@ -1,0 +1,19 @@
+{
+  "name": "axiom-docs",
+  "version": "1.0.0",
+  "description": "Axiom 中转站官方文档 —— 一个统一的 OpenAI 兼容 endpoint",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "^5.2.9",
+    "@fontsource-variable/geist-mono": "^5.2.8",
+    "@fontsource-variable/newsreader": "^5.2.10"
+  }
+}
