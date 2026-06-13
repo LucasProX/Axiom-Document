@@ -8,6 +8,8 @@ import '@fontsource-variable/geist-mono'
 import '@fontsource-variable/newsreader'
 
 import './style.css'
+import ClientCards from './ClientCards.vue'
+import SiteFooter from './SiteFooter.vue'
 
 // 「公理」引文，放在首页 tagline（一把钥匙…）下方（按语言切换）
 const AXIOM: Record<string, string> = {
@@ -31,7 +33,11 @@ export default {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'home-hero-info-after': () => h(AxiomQuote)
+      'home-hero-info-after': () => h(AxiomQuote),
+      'layout-bottom': () => h(SiteFooter)
     })
+  },
+  enhanceApp({ app }) {
+    app.component('ClientCards', ClientCards)
   }
 }

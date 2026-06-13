@@ -9,10 +9,19 @@
 | **Base URL** | `https://axiomcode.top`（**无** `/v1`） |
 | **API Key** | `sk-axiom-你的Key` |
 
+::: info 系统要求
+
+- **Node.js** 18 及以上
+- **操作系统**：Windows 10/11 · macOS · Linux（主流发行版）
+- 网络能正常访问 `axiomcode.top`
+
+:::
+
 ## 本地安装
 
 ```bash
 npm install -g openclaw
+openclaw --version  # 验证：能打印版本号即安装成功
 ```
 
 配置文件位置：

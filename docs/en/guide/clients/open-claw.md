@@ -9,10 +9,19 @@
 | **Base URL** | `https://axiomcode.top` (**without** `/v1`) |
 | **API Key** | `sk-axiom-YourKey` |
 
+::: info System requirements
+
+- **Node.js** 18 or later
+- **OS**: Windows 10/11 · macOS · Linux (major distros)
+- Network access to `axiomcode.top`
+
+:::
+
 ## Local Installation
 
 ```bash
 npm install -g openclaw
+openclaw --version  # verify: printing a version number means it installed
 ```
 
 Config file location:

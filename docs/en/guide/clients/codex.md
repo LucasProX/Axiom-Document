@@ -9,25 +9,35 @@
 | **Base URL** | `https://axiomcode.top/v1` |
 | **API Key** | `sk-axiom-xxxx` (from [2.2 Create a Key](/en/guide/apikey/create)) |
 
+::: info System requirements
+
+| Form factor | Requirements |
+| --- | --- |
+| Codex CLI | Node.js 18+; Windows 10/11 · macOS · Linux (incl. WSL) |
+| VSCode plugin | Latest VS Code + the Codex extension |
+| Mobile app | iOS / Android, from the app store |
+
+:::
+
 ## Method 1: Environment variables (fastest)
 
-**macOS / Linux** — append to `~/.zshrc` or `~/.bashrc`:
+Set the address and key as environment variables (pick your OS):
 
-```bash
+::: code-group
+
+```bash [macOS / Linux]
+# Append to ~/.zshrc or ~/.bashrc, then run source to apply
 export OPENAI_API_KEY="sk-axiom-your-key"
 export OPENAI_BASE_URL="https://axiomcode.top/v1"
 ```
 
-Run `source ~/.zshrc` (or `source ~/.bashrc`) to apply.
-
-**Windows PowerShell** (persisted):
-
-```powershell
+```powershell [Windows PowerShell]
+# Persist to user environment variables; takes effect after reopening the terminal
 [Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "sk-axiom-your-key", "User")
 [Environment]::SetEnvironmentVariable("OPENAI_BASE_URL", "https://axiomcode.top/v1", "User")
 ```
 
-Takes effect after closing and reopening the terminal.
+:::
 
 ## Method 2: Config file
 

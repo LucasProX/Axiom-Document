@@ -2,20 +2,33 @@
 
 > OpenCode uses the **OpenAI protocol**, with the Base URL `https://axiomcode.top/v1`.
 
+::: info System requirements
+
+- **Node.js** 18 or later (required for the npm install)
+- **OS**: Windows 10/11 · macOS · Linux (major distros)
+- Network access to `axiomcode.top`
+
+:::
+
 ## Installation
 
 Choose any one method:
 
-```bash
-# Global install via npm
+::: code-group
+
+```bash [npm]
 npm install -g opencode-ai
+```
 
-# Or Homebrew (macOS)
+```bash [Homebrew · macOS/Linux]
 brew install sst/tap/opencode
+```
 
-# Or the install script
+```bash [Script · macOS/Linux]
 curl -fsSL https://opencode.ai/install | bash
 ```
+
+:::
 
 Verify:
 

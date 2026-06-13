@@ -10,12 +10,12 @@ Axiom 聚合了 Anthropic、OpenAI、Google、xAI 以及主流国产厂商的模
 
 | 模型名称 | 说明 |
 | --- | --- |
+| `claude-fable-5` | （由于美国政府政策，暂时不可用）Fable 系列 |
 | `claude-opus-4-8` | Opus 旗舰，复杂推理与长文写作首选 |
 | `claude-opus-4-7` | Opus 上一代 |
 | `claude-opus-4-6` | Opus 早期版本 |
 | `claude-sonnet-4-6` | 性能与成本均衡，适合日常与编码 |
 | `claude-haiku-4-5-20251001` | 轻量极速，适合高并发与短任务 |
-| `claude-fable-5` | Fable 系列 |
 
 ## OpenAI · GPT
 

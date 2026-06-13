@@ -9,6 +9,14 @@
 | **Base URL** | `https://axiomcode.top` (note: **no** `/v1`) |
 | **API Key** | `sk-axiom-your-key` |
 
+::: info System requirements
+
+- **Node.js** 18 or later (LTS recommended)
+- **OS**: Windows 10/11 · macOS · Linux (major distros; WSL also works on Windows)
+- Network access to `axiomcode.top`
+
+:::
+
 ## Install
 
 ```bash
@@ -18,19 +26,23 @@ claude --version
 
 ## Environment variables
 
-**macOS / Linux** — append to `~/.zshrc` or `~/.bashrc`:
+Set the address and key as environment variables (pick your OS):
 
-```bash
+::: code-group
+
+```bash [macOS / Linux]
+# Append to ~/.zshrc or ~/.bashrc, then run source to apply
 export ANTHROPIC_API_KEY="sk-axiom-your-key"
 export ANTHROPIC_BASE_URL="https://axiomcode.top"
 ```
 
-**Windows PowerShell**:
-
-```powershell
+```powershell [Windows PowerShell]
+# Permanently writes user environment variables; takes effect after reopening the terminal
 [Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "sk-axiom-your-key", "User")
 [Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://axiomcode.top", "User")
 ```
+
+:::
 
 ## Config file method
 

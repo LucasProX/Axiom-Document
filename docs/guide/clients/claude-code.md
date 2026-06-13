@@ -9,6 +9,14 @@
 | **Base URL** | `https://axiomcode.top`（注意：**无** `/v1`） |
 | **API Key** | `sk-axiom-你的Key` |
 
+::: info 系统要求
+
+- **Node.js** 18 及以上（建议 LTS）
+- **操作系统**：Windows 10/11 · macOS · Linux（主流发行版，Windows 亦可用 WSL）
+- 网络能正常访问 `axiomcode.top`
+
+:::
+
 ## 安装
 
 ```bash
@@ -18,19 +26,23 @@ claude --version
 
 ## 环境变量
 
-**macOS / Linux** —— 追加到 `~/.zshrc` 或 `~/.bashrc`：
+把地址与密钥写入环境变量（按系统选择）：
 
-```bash
+::: code-group
+
+```bash [macOS / Linux]
+# 追加到 ~/.zshrc 或 ~/.bashrc，保存后执行 source 使其生效
 export ANTHROPIC_API_KEY="sk-axiom-你的Key"
 export ANTHROPIC_BASE_URL="https://axiomcode.top"
 ```
 
-**Windows PowerShell**：
-
-```powershell
+```powershell [Windows PowerShell]
+# 永久写入用户环境变量；关闭并重新打开终端后生效
 [Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "sk-axiom-你的Key", "User")
 [Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://axiomcode.top", "User")
 ```
+
+:::
 
 ## 配置文件方式
 

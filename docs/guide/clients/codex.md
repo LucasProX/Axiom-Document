@@ -9,25 +9,35 @@
 | **Base URL** | `https://axiomcode.top/v1` |
 | **API Key** | `sk-axiom-xxxx`（来自 [2.2 新建密钥](/guide/apikey/create)） |
 
+::: info 系统要求
+
+| 形态 | 要求 |
+| --- | --- |
+| Codex CLI | Node.js 18+；Windows 10/11 · macOS · Linux（含 WSL） |
+| VSCode 插件 | 最新版 VS Code + Codex 扩展 |
+| 移动端 App | iOS / Android，应用商店安装 |
+
+:::
+
 ## 方式一：环境变量（最快）
 
-**macOS / Linux** —— 追加到 `~/.zshrc` 或 `~/.bashrc`：
+把地址与密钥写入环境变量（按系统选择）：
 
-```bash
+::: code-group
+
+```bash [macOS / Linux]
+# 追加到 ~/.zshrc 或 ~/.bashrc，保存后执行 source 使其生效
 export OPENAI_API_KEY="sk-axiom-你的Key"
 export OPENAI_BASE_URL="https://axiomcode.top/v1"
 ```
 
-执行 `source ~/.zshrc`（或 `source ~/.bashrc`）使其生效。
-
-**Windows PowerShell**（永久写入）：
-
-```powershell
+```powershell [Windows PowerShell]
+# 永久写入用户环境变量；关闭并重新打开终端后生效
 [Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "sk-axiom-你的Key", "User")
 [Environment]::SetEnvironmentVariable("OPENAI_BASE_URL", "https://axiomcode.top/v1", "User")
 ```
 
-关闭并重新打开终端后生效。
+:::
 
 ## 方式二：配置文件
 

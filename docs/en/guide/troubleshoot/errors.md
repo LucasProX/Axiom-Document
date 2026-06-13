@@ -48,6 +48,25 @@ Don't panic when you hit an error — the table below will solve most of them. W
 
 **Fix:** On Windows, restart the terminal after `setx`; on macOS with zsh, write to `~/.zshrc`; use `echo $VariableName` to confirm the variable is output.
 
+## Before contacting support, prepare this
+
+If the steps above didn't help, include the following when you reach out — it greatly speeds up diagnosis:
+
+```text
+Account email:
+Token first/last 4 chars: sk-axiom-XXXX … XXXX (never send the full key)
+Time of error (with time zone):
+Client / version: e.g. Codex CLI, Claude Code
+Protocol & Base URL: OpenAI https://axiomcode.top/v1 or Anthropic https://axiomcode.top
+Model used: e.g. gpt-5-codex, claude-sonnet-4-6
+Error code / message:
+Self-check result: paste the output from "4.1 Self-check Commands"
+```
+
+::: warning Keep your key safe
+Provide only the **first/last 4 characters** of the token — never send the full `sk-...` key.
+:::
+
 ---
 
 Next: [FAQ](/en/guide/faq)

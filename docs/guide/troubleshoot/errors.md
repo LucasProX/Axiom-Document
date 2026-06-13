@@ -48,6 +48,25 @@
 
 **处理：** Windows 上 `setx` 后需重启终端；macOS 用 zsh 时写到 `~/.zshrc`；用 `echo $变量名` 确认变量已输出。
 
+## 联系客服前，请准备这些信息
+
+如果对照上面仍未解决，联系客服时附上以下信息，能大幅加快定位：
+
+```text
+账号邮箱：
+令牌前后 4 位：sk-axiom-XXXX … XXXX（切勿发送完整密钥）
+出错时间（含时区）：
+客户端 / 版本：如 Codex CLI、Claude Code
+协议 & Base URL：OpenAI https://axiomcode.top/v1 或 Anthropic https://axiomcode.top
+调用的模型：如 gpt-5-codex、claude-sonnet-4-6
+错误码 / 报错信息：
+自检结果：粘贴「4.1 自检命令」的输出
+```
+
+::: warning 注意密钥安全
+只提供令牌的**前后 4 位**，切勿发送完整 `sk-...` 密钥。
+:::
+
 ---
 
 下一步：[常见问题 FAQ](/guide/faq)

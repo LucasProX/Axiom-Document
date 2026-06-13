@@ -4,9 +4,9 @@
 
 ## 一、OpenAI 协议自检（Codex / OpenCode 等）
 
-**Bash：**
+::: code-group
 
-```bash
+```bash [macOS / Linux]
 curl https://axiomcode.top/v1/chat/completions \
   -H "Authorization: Bearer sk-axiom-你的Key" \
   -H "Content-Type: application/json" \
@@ -16,14 +16,14 @@ curl https://axiomcode.top/v1/chat/completions \
   }'
 ```
 
-**Windows PowerShell：**
-
-```powershell
+```powershell [Windows PowerShell]
 curl https://axiomcode.top/v1/chat/completions `
   -H "Authorization: Bearer sk-axiom-你的Key" `
   -H "Content-Type: application/json" `
   -d '{ "model": "gpt-5-codex", "messages": [{"role":"user","content":"ping"}] }'
 ```
+
+:::
 
 成功响应大致如下：
 

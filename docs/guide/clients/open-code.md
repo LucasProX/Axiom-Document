@@ -2,20 +2,33 @@
 
 > OpenCode 走 **OpenAI 协议**，Base URL 为 `https://axiomcode.top/v1`。
 
+::: info 系统要求
+
+- **Node.js** 18 及以上（npm 安装方式需要）
+- **操作系统**：Windows 10/11 · macOS · Linux（主流发行版）
+- 网络能正常访问 `axiomcode.top`
+
+:::
+
 ## 安装
 
 任选一种：
 
-```bash
-# npm 全局安装
+::: code-group
+
+```bash [npm]
 npm install -g opencode-ai
+```
 
-# 或 Homebrew（macOS）
+```bash [Homebrew · macOS/Linux]
 brew install sst/tap/opencode
+```
 
-# 或安装脚本
+```bash [脚本 · macOS/Linux]
 curl -fsSL https://opencode.ai/install | bash
 ```
+
+:::
 
 验证：
 

@@ -4,9 +4,9 @@
 
 ## 1. OpenAI Protocol Self-check (Codex / OpenCode, etc.)
 
-**Bash:**
+::: code-group
 
-```bash
+```bash [macOS / Linux]
 curl https://axiomcode.top/v1/chat/completions \
   -H "Authorization: Bearer sk-axiom-YourKey" \
   -H "Content-Type: application/json" \
@@ -16,14 +16,14 @@ curl https://axiomcode.top/v1/chat/completions \
   }'
 ```
 
-**Windows PowerShell:**
-
-```powershell
+```powershell [Windows PowerShell]
 curl https://axiomcode.top/v1/chat/completions `
   -H "Authorization: Bearer sk-axiom-YourKey" `
   -H "Content-Type: application/json" `
   -d '{ "model": "gpt-5-codex", "messages": [{"role":"user","content":"ping"}] }'
 ```
+
+:::
 
 A successful response looks roughly like this:
 

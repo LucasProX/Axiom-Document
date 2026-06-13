@@ -4,24 +4,6 @@ import { defineConfig } from 'vitepress'
 const TG_ICON =
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0a12 12 0 1 0 0 24a12 12 0 0 0 0-24Zm5.7 7.3l-1.8 8.6c-.1.6-.5.7-1 .4l-2.8-2.1l-1.4 1.3c-.2.2-.3.3-.6.3l.2-3l5.5-5c.2-.2 0-.3-.3-.1l-6.8 4.3l-2.9-.9c-.6-.2-.6-.6.1-.9l11.4-4.4c.5-.2 1 .1.8.9Z"/></svg>'
 
-// 构建时生成「文档更新时间」（每次 build / 启动 dev 自动刷新），按东八区显示
-const _tp = Object.fromEntries(
-  new Intl.DateTimeFormat('en-GB', {
-    timeZone: 'Asia/Shanghai',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false
-  })
-    .formatToParts(new Date())
-    .filter((x) => x.type !== 'literal')
-    .map((x) => [x.type, x.value])
-)
-const UPDATED_ZH = `${_tp.year}年${+_tp.month}月${+_tp.day}日 ${_tp.hour}:${_tp.minute}`
-const UPDATED_EN = `${_tp.year}-${_tp.month}-${_tp.day} ${_tp.hour}:${_tp.minute} (UTC+8)`
-
 // 配置文档详见 https://vitepress.dev/zh/reference/site-config
 export default defineConfig({
   title: 'AxiomCode',
@@ -31,6 +13,9 @@ export default defineConfig({
 
   cleanUrls: true,
   lastUpdated: true,
+
+  // 代码块统一用深色高对比主题，注释 / 变量名等都是亮色，浅色页面下也清晰
+  markdown: { theme: 'github-dark' },
 
   head: [
     ['link', { rel: 'icon', href: '/images/logo.jpg' }],
@@ -87,15 +72,6 @@ export default defineConfig({
         siteTitle: 'AxiomCode 文档',
         nav: [
           { text: '快速上手', link: '/guide/prepare/register' },
-          {
-            text: '客户端接入',
-            items: [
-              { text: 'Codex 系列', link: '/guide/clients/codex' },
-              { text: 'Claude Code 系列', link: '/guide/clients/claude-code' },
-              { text: 'OpenCode', link: '/guide/clients/open-code' },
-              { text: 'OpenClaw', link: '/guide/clients/open-claw' }
-            ]
-          },
           { text: '支持的模型', link: '/guide/models' },
           {
             text: '相关链接',
@@ -156,10 +132,6 @@ export default defineConfig({
         },
         outline: false,
         docFooter: { prev: '上一页', next: '下一页' },
-        footer: {
-          message: '高速稳定的 AI 编程中转站',
-          copyright: `AxiomCode © 2026<br><span class="footer-updated">文档更新于 ${UPDATED_ZH}</span>`
-        },
         returnToTopLabel: '回到顶部',
         sidebarMenuLabel: '菜单',
         darkModeSwitchLabel: '主题',
@@ -179,15 +151,6 @@ export default defineConfig({
         siteTitle: 'AxiomCode Docs',
         nav: [
           { text: 'Get Started', link: '/en/guide/prepare/register' },
-          {
-            text: 'Client Setup',
-            items: [
-              { text: 'Codex', link: '/en/guide/clients/codex' },
-              { text: 'Claude Code', link: '/en/guide/clients/claude-code' },
-              { text: 'OpenCode', link: '/en/guide/clients/open-code' },
-              { text: 'OpenClaw', link: '/en/guide/clients/open-claw' }
-            ]
-          },
           { text: 'Models', link: '/en/guide/models' },
           {
             text: 'Links',
@@ -248,10 +211,6 @@ export default defineConfig({
         },
         outline: false,
         docFooter: { prev: 'Previous', next: 'Next' },
-        footer: {
-          message: 'Fast, stable AI relay for coding',
-          copyright: `AxiomCode © 2026<br><span class="footer-updated">Last updated ${UPDATED_EN}</span>`
-        },
         lastUpdatedText: 'Last updated',
         langMenuLabel: 'Change language'
       }

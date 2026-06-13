@@ -10,12 +10,12 @@ The model list is continuously updated. For the most current full list and real-
 
 | Model Name | Description |
 | --- | --- |
+| `claude-fable-5` | (Temporarily unavailable due to US government policy) Fable series |
 | `claude-opus-4-8` | Opus flagship; top choice for complex reasoning and long-form writing |
 | `claude-opus-4-7` | Previous-generation Opus |
 | `claude-opus-4-6` | Early Opus version |
 | `claude-sonnet-4-6` | Balanced performance and cost; suited for everyday use and coding |
 | `claude-haiku-4-5-20251001` | Lightweight and ultra-fast; suited for high concurrency and short tasks |
-| `claude-fable-5` | Fable series |
 
 ## OpenAI · GPT
 
