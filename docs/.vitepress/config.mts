@@ -96,9 +96,7 @@ export default defineConfig({
               { text: 'OpenClaw', link: '/guide/clients/open-claw' }
             ]
           },
-          { text: '排错', link: '/guide/troubleshoot/selfcheck' },
           { text: '支持的模型', link: '/guide/models' },
-          { text: 'FAQ', link: '/guide/faq' },
           {
             text: '相关链接',
             items: [
@@ -190,9 +188,7 @@ export default defineConfig({
               { text: 'OpenClaw', link: '/en/guide/clients/open-claw' }
             ]
           },
-          { text: 'Troubleshoot', link: '/en/guide/troubleshoot/selfcheck' },
           { text: 'Models', link: '/en/guide/models' },
-          { text: 'FAQ', link: '/en/guide/faq' },
           {
             text: 'Links',
             items: [
